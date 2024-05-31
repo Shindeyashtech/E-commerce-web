@@ -1,0 +1,67 @@
+.log-sign{
+    width: 100%;
+    height: 80vh;
+    background: #fce3fe;
+    padding-top: 100px;
+}
+ .log-sign-container{
+    width: 580px;
+    height: 640px;
+    background: white;
+    margin: auto;
+    padding: 40px 60px;
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
+}
+.log-sign-container h1{
+    margin: 20px 0px;  
+}
+.log-sign-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    margin-top: 30px;
+}
+.log-sign-fields input{
+    height: 72px;
+    width: 100%;
+    padding-left: 20px;
+    border: 1px solid #c9c9c9;
+    outline: none;
+    color: #5c5c5c;
+    font-size: 18px;
+}
+.log-sign-container button{
+    width: 580px;
+    height: 72px;
+    color: white;
+    background: #ff4141;
+    margin-top: 30px;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.log-sign-login{
+    margin-top: 20px;
+    color: #5c5c5c;
+    font-weight: 500;
+    font-size: 18px;
+    
+}
+.log-sign-login span{
+    color: #ff4141;
+    font-weight: 600;
+}
+.log-sign-agree{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    gap: 20px;
+    color: #5c5c5c;
+    font-size: 18px;
+    font-weight: 500;
+} 
