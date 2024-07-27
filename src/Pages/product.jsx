@@ -1,17 +1,16 @@
-import React from 'react'
-import { useContext } from 'react'
-import { useParams } from 'react-router-dom';
+import React, { createContext } from 'react';
+import all_product from '../Components/Assets/all_product';
 
-const Product = () => {
-  const {all_product}=useContext(ShopContext);
-  const {productID} = useParams();
-  const Product = all_product.find((e)=> e.id === Number(productID));
-   
+export const ShopContext = createContext(null);
+
+const ShopContextProvider = ({ children }) => {
+  const contextValue = { all_product };
+
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <ShopContext.Provider value={contextValue}>
+      {children}
+    </ShopContext.Provider>
+  );
+};
 
-export default Product
+export default ShopContextProvider;
