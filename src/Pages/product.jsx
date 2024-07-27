@@ -1,16 +1,24 @@
-import React, { createContext } from 'react';
-import all_product from '../Components/Assets/all_product';
+import React, { useContext } from 'react';
+import { useParams } from 'react-router-dom';
+import { ShopContext } from '../Context/ShopContext';
+import Breadcrumb from '../Components/Breadcrumb/Breadcrumb';
 
-export const ShopContext = createContext(null);
+const Product = () => {
+  const { all_product } = useContext(ShopContext);
+  const { productID } = useParams();
+  const product = all_product.find((e) => e.id === Number(productID));
 
-const ShopContextProvider = ({ children }) => {
-  const contextValue = { all_product };
+  if (!product) {
+    console.error(`Product with ID ${productID} not found`);
+    return <div>Product not found</div>;
+  }
 
   return (
-    <ShopContext.Provider value={contextValue}>
-      {children}
-    </ShopContext.Provider>
+    <div>
+      <Breadcrumb product={product} />
+      {/* Render other product details here */}
+    </div>
   );
 };
 
-export default ShopContextProvider;
+export default Product;
