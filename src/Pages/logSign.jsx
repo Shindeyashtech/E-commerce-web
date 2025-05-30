@@ -17,8 +17,8 @@ const LogSign = () => {
           <div className="log-sign-agree">
             <input type="checkbox" name="" id="" /> 
             <p>By continuing, i agree to the terms of use & privacy policy</p>
-          </div>
         </div>
+          </div> 
     </div>
   )
 }
